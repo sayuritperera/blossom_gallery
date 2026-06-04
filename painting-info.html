@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Info | Detail View</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">the gallery.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html" class="active">Paintings</a></li>
+            <li><a href="cart.html" id="nav-cart">Cart 🛒</a></li>
+        </ul>
+    </nav>
+
+    <main class="detail-container">
+        <div class="catalog-breadcrumb">Main / Catalog / Detail Workspace</div>
+
+        <section class="art-split-layout">
+            
+            <div class="art-visual-side">
+                <div class="main-display-frame">
+                    <img src="sib1.jpg" alt="Artwork View" class="painting-main-display-img">
+                </div>
+
+                <div class="perspective-thumbnails-row">
+                    <div class="thumb-dot active" id="view-front-btn">Front View</div>
+                    <div class="thumb-dot" id="view-angle-btn">Angle View</div>
+                    <div class="thumb-dot" id="view-wall-btn">On Wall View</div>
+                </div>
+            </div>
+
+            <div class="art-content-side">
+                <span class="editorial-badge">Available Original Work</span>
+                <h1 id="canvas-title">Serenade in Blue</h1>
+                <div id="canvas-price" class="detail-price-tag">$420.00</div>
+
+                <div class="specifications-box">
+                    <h3>Specifications</h3>
+                    <ul>
+                        <li><strong>Medium:</strong> <span id="art-spec-medium">Heavy-body Studio Oil on Premium Stretched Linen</span></li>
+                        <li><strong>Dimensions:</strong> <span id="art-spec-dimensions">24" × 36" (Gallery Wrap, 1.5" Depth)</span></li>
+                        <li><strong>Year Created:</strong> <span id="art-spec-year">March 2026</span></li>
+                        <li><strong>Authenticity:</strong> Hand-signed on reverse canvas fold</li>
+                    </ul>
+                </div>
+
+                <p class="artwork-narrative-desc" id="art-narrative-text">
+                    Capturing organic coastal transitions through layered palette knife strokes and custom mixed indigo pigments. This piece plays elegantly with natural light shifts throughout the day, altering the perceived depth of the texture fields.
+                </p>
+
+                <button id="add-to-cart-detail-btn" class="secure-cta-btn" style="width:100%; border:none; cursor:pointer; text-align:center; display:block;">Add to Acquisition Cart</button>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="copyright-bar">
+        <p>© 2026 The Gallery. All rights reserved. Designed for Phase 1 Presentation.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

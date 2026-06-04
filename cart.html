@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Acquisition Cart | The Gallery</title>
+    <!-- Premium Fonts Setup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-clean-bg">
+
+    <!-- GLOBAL EMBEDDED NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-logo">the gallery.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Paintings</a></li>
+            <li><a href="cart.html" class="active" id="nav-cart">Cart 🛒</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN EDITORIAL TWO-COLUMN WORKSPACE -->
+    <main class="cart-container">
+        <header class="cart-header-title">
+            <span class="catalog-breadcrumb">Main / Catalog / Order Bag</span>
+            <h1>Your Acquisition Cart</h1>
+        </header>
+
+        <div class="cart-split-layout">
+            
+            <!-- LEFT PANEL: Dynamic Selected Painting Stack -->
+            <div class="cart-items-panel">
+                <h3 class="panel-section-title">Selected Artworks</h3>
+                <div id="dynamic-invoice-list-container">
+                    <!-- Script loops and injects added product rows right here -->
+                </div>
+                
+                <div class="cart-utility-buttons">
+                    <a href="gallery.html" class="continue-shopping-link">← Continue Adding Paintings</a>
+                    <button id="clear-cart-trigger" class="clear-basket-btn">Empty Basket 🗑️</button>
+                </div>
+
+                <div class="financials-calculation-block">
+                    <div class="math-row">
+                        <span>Subtotal Value:</span>
+                        <span id="invoice-subtotal-value" class="math-price-tag">$0.00</span>
+                    </div>
+                    <div class="math-row">
+                        <span>Insured Art-Transit Delivery:</span>
+                        <span class="free-badge-accent">Complimentary</span>
+                    </div>
+                    <div class="math-row total-highlight-row">
+                        <span>Total Collective Due:</span>
+                        <span id="invoice-total-value" class="math-total-tag">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL: PREMIUM LOGISTICS CHECKOUT CARD -->
+            <div class="cart-summary-sidebar">
+                <div class="collector-checkout-card">
+                    <h3 class="panel-section-title">Collector Checkout</h3>
+                    <p class="checkout-subtitle-note">Complete the secure profile logistics below to acquire your creations.</p>
+                    
+                    <form id="integrated-final-checkout-form" class="editorial-form-grid">
+                        <div class="form-group-block">
+                            <label for="billing-name">Your Full Name *</label>
+                            <input type="text" id="billing-name" placeholder="Sarah Jenkins" required>
+                        </div>
+
+                        <div class="form-group-block">
+                            <label for="billing-email">Email Address *</label>
+                            <input type="email" id="billing-email" placeholder="sarah@example.com" required>
+                        </div>
+
+                        <div class="form-group-block">
+                            <label for="billing-phone">Contact Mobile Number *</label>
+                            <input type="tel" id="billing-phone" placeholder="+1 (555) 019-2834" required>
+                        </div>
+
+                        <div class="form-group-block">
+                            <label for="billing-address">Shipping Destination Address *</label>
+                            <input type="text" id="billing-address" placeholder="128 Fine Art Lane" required>
+                        </div>
+
+                        <!-- Grid Split Row for City & Zip Code -->
+                        <div class="form-grid-inner-split">
+                            <div class="form-group-block">
+                                <label for="billing-city">City *</label>
+                                <input type="text" id="billing-city" placeholder="New York" required>
+                            </div>
+                            <div class="form-group-block">
+                                <label for="billing-zip">Zip / Postal Code *</label>
+                                <input type="text" id="billing-zip" placeholder="10001" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group-block full-span-input">
+                            <label for="billing-notes">Additional Delivery Instructions</label>
+                            <textarea id="billing-notes" rows="3" placeholder="e.g. Leave with concierge handler..."></textarea>
+                        </div>
+
+                        <div class="form-action-row">
+                            <button type="submit" class="submit-order-btn">Lock In Secure Order & Pay</button>
+                            <p class="form-safety-footer-text">🔒 Premium Art-Transit Insured Shipping Included Internationally.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="copyright-bar">
+        <p>© 2026 The Gallery. All rights reserved. Designed for Phase 1 Presentation.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
