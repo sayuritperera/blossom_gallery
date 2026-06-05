@@ -12,28 +12,22 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-logo">the gallery.</div>
+        <div class="nav-logo">Blossom Gallery.</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html" class="active">Paintings</a></li>
-            <li><a href="cart.html" id="nav-cart">Cart 🛒</a></li>
+            <li><a href="cart.html" id="nav-contact">Inquiry / Contact</a></li>
         </ul>
     </nav>
 
     <main class="detail-container">
-        <div class="catalog-breadcrumb">Main / Catalog / Detail Workspace</div>
+        <div class="catalog-breadcrumb">Main / Artworks / Detail Workspace</div>
 
         <section class="art-split-layout">
             
             <div class="art-visual-side">
                 <div class="main-display-frame">
-                    <img src="sib1.jpg" alt="Artwork View" class="painting-main-display-img">
-                </div>
-
-                <div class="perspective-thumbnails-row">
-                    <div class="thumb-dot active" id="view-front-btn">Front View</div>
-                    <div class="thumb-dot" id="view-angle-btn">Angle View</div>
-                    <div class="thumb-dot" id="view-wall-btn">On Wall View</div>
+                    <img src="paradisefound1.JPG" alt="Artwork View" class="painting-main-display-img">
                 </div>
             </div>
 
@@ -56,17 +50,34 @@
                     Capturing organic coastal transitions through layered palette knife strokes and custom mixed indigo pigments. This piece plays elegantly with natural light shifts throughout the day, altering the perceived depth of the texture fields.
                 </p>
 
-                <button id="add-to-cart-detail-btn" class="secure-cta-btn" style="width:100%; border:none; cursor:pointer; text-align:center; display:block;">Add to Acquisition Cart</button>
+                <button id="quick-add-to-cart-detail-btn" class="secure-cta-btn" style="width:100%; border:none; cursor:pointer; text-align:center; display:block;">Click to get more information</button>
             </div>
 
         </section>
     </main>
 
     <div class="copyright-bar">
-        <p>© 2026 The Gallery. All rights reserved. Designed for Phase 1 Presentation.</p>
+        <p>© 2026 Blossom Gallery. All rights reserved. COBACM-252P-008-PERERA OLST.</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Direct click handler intercepting the detail view button
+            $('#quick-add-to-cart-detail-btn').on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Displays global information prompt alert
+                alert("Please navigate to our Contact / Inquiry page to request comprehensive information packet distributions regarding this painting asset piece.");
+                
+                // Forces direct forward handoff to your contact system page file
+                window.location.href = "cart.html"; 
+            });
+        });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
