@@ -528,7 +528,54 @@ body {
     .studio-photo-box { height: 350px; }
     .home-footer-grid { flex-direction: column; gap: 35px; padding: 30px 20px; }
 }
+/* Precise Mobile Layout Rebalancing */
+@media (max-width: 850px) {
+    /* Forces columns to drop down gracefully vertically */
+    .hero-split-container, 
+    .art-split-layout,
+    .cart-split-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 20px !important;
+    }
 
+    /* Prevents the text panels from shrinking or shifting left */
+    .hero-left-editorial, 
+    .art-content-side, 
+    .art-visual-side {
+        width: 100% !important;
+        padding: 30px 15px !important;
+        text-align: center !important;
+    }
+
+    /* Centers custom actionable elements alignment */
+    .hero-catalog-cta {
+        align-self: center !important;
+        margin: 0 auto !important;
+    }
+
+    /* Scales and locks image containers into screen boundaries */
+    .hero-right-display, 
+    .main-display-frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 350px !important;
+        padding: 10px !important;
+    }
+
+    .hero-frame-wrapper {
+        width: 100% !important;
+        height: 350px !important;
+    }
+
+    /* Shrinks hero headers so they don't break line boundaries */
+    .hero-left-editorial h1 {
+        font-size: 2.5rem !important;
+        letter-spacing: 0px !important;
+    }
+}
 /* ==========================================================================
    8. ASYMMETRICAL CATALOG GALLERY LAYOUT
    ========================================================================== */
@@ -1219,4 +1266,38 @@ body {
     .cart-split-layout { flex-direction: column; gap: 40px; }
     .cart-container { padding: 0 20px; margin: 30px auto; }
     .cart-summary-sidebar { position: static; width: 100%; }
+}
+
+/* Mobile Responsive Fix for Hero Section */
+@media (max-width: 768px) {
+    /* 1. Force the container to stack vertically instead of side-by-side */
+    .hero-container, 
+    .welcome-section-grid { /* Use whatever class name wraps both your text and image block */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Centers the text beautifully on mobile */
+        padding: 20px;
+    }
+
+    /* 2. Fix the headline spilling over the edge */
+    h1 {
+        font-size: 2.2rem; /* Shrinks the giant text slightly so it fits perfectly on mobile screens */
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    /* 3. Force the painting image to appear and fit nicely below the text */
+    .hero-image-wrapper, 
+    .hero-painting-img { /* Use the class name of your image or its container */
+        width: 100%;
+        max-width: 400px; /* Prevents the painting from becoming massively blown out */
+        margin-top: 30px; /* Leaves a sleek gap between your 'View Artworks' button and the canvas */
+    }
+    
+    .hero-painting-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }

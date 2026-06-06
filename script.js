@@ -193,7 +193,7 @@ $(document).ready(function() {
                                     <span style="font-size: 18px;">✉️</span>
                                     <div>
                                         <p style="margin: 0; font-size: 11px; text-transform: uppercase; color: #888; letter-spacing: 1px;">Direct Studio Email</p>
-                                        <a href="mailto:studio@wholepetals.com" style="margin: 0; font-size: 15px; font-weight: 500; color: #111; text-decoration: none;">studio@wholepetals.com</a>
+                                        <a href="mailto:studio@blossomgallery.com" style="margin: 0; font-size: 15px; font-weight: 500; color: #111; text-decoration: none;">studio@blossomgallery.com</a>
                                     </div>
                                 </div>
 
@@ -201,7 +201,7 @@ $(document).ready(function() {
                                     <span style="font-size: 18px;">📸</span>
                                     <div>
                                         <p style="margin: 0; font-size: 11px; text-transform: uppercase; color: #888; letter-spacing: 1px;">Instagram Portfolio</p>
-                                        <a href="https://instagram.com" target="_blank" style="margin: 0; font-size: 15px; font-weight: 500; color: #111; text-decoration: none;">@WholePetals.Studio</a>
+                                        <a href="https://instagram.com" target="_blank" style="margin: 0; font-size: 15px; font-weight: 500; color: #111; text-decoration: none;">@Blossom.Gallery</a>
                                     </div>
                                 </div>
 
@@ -209,7 +209,7 @@ $(document).ready(function() {
                                     <span style="font-size: 18px;">📱</span>
                                     <div>
                                         <p style="margin: 0; font-size: 11px; text-transform: uppercase; color: #888; letter-spacing: 1px;">Direct Line / WhatsApp</p>
-                                        <a href="tel:+1234567890" style="margin: 0; font-size: 15px; font-weight: 500; color: #111; text-decoration: none;">+1 (234) 567-890</a>
+                                        <a href="tel:+1234567890" style="margin: 0; font-size: 15px; font-weight: 500; color: #111; text-decoration: none;">011-222-675</a>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +227,7 @@ $(document).ready(function() {
             displayZone.html(`
                 <div style="max-width: 600px; margin: 80px auto; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 20px;">
                     <h2 style="font-family: 'Cinzel', serif; font-size: 28px; margin-bottom: 20px;">Connect with the Studio</h2>
-                    <p style="color: #666; line-height: 1.7; margin-bottom: 30px;">Thank you for visiting my website. To inquire about acquiring custom paintings or purchasing pieces from my collections, please reach out directly via email at <a href="mailto:studio@wholepetals.com" style="color:#bfa37a; text-decoration:none; font-weight:500;">studio@wholepetals.com</a> or view my social media profiles.</p>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 30px;">Thank you for visiting my website. To inquire about acquiring custom paintings or purchasing pieces from my collections, please reach out directly via email at <a href="mailto:studio@blossomgallery.com" style="color:#bfa37a; text-decoration:none; font-weight:500;">studio@blossomgallery.com</a> or view my social media profiles.</p>
                     <a href="gallery.html" style="display: inline-block; padding: 12px 30px; background: #111; color: #fff; text-decoration: none; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">View Artwork Collection</a>
                 </div>
             `);
