@@ -93,7 +93,7 @@ $(document).ready(function() {
                 year: "January 2026" 
             },
             "Lilies Canvas": { 
-                frontImg: "lilies_canvas_1.JPG", 
+                frontImg: "liliescanvas_1.jpg", 
                 medium: "Fine Acrylic & Oil Glaze Blend on Traditional Canvas", 
                 dimensions: "20\" × 20\" (Classic Profile)", 
                 year: "April 2026" 
