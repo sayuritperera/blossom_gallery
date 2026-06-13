@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. GLOBAL RESET & CORE COLOR PALETTE
+   1. CORE COLOR PALETTE
    ========================================================================== */
 * {
     margin: 0;
@@ -9,14 +9,14 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #faf6f0; /* Ultra-premium warm linen backdrop */
+    background-color: #faf6f0; 
     color: #1a2421;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================================================================
-   2. GLOBAL NAVIGATION BAR
+   2. NAVIGATION BAR
    ========================================================================== */
 .navbar {
     display: flex;
@@ -59,7 +59,7 @@ body {
 }
 
 /* ==========================================================================
-   3. HERO PRESENTATION BLOCK
+   3. HERO BLOCK
    ========================================================================== */
 .hero-split-container {
     display: flex;
@@ -139,7 +139,7 @@ body {
 }
 
 /* ==========================================================================
-   CONTINUOUS SCROLLING BRAND MARQUEE LINE
+   MARQUEE LINE
    ========================================================================== */
 .brand-marquee-strip {
     width: 100%;
@@ -265,7 +265,7 @@ body {
 }
 
 /* ==========================================================================
-   5. LOOKBOOK, VISION & STUDIO SECTIONS
+   5. VISION & STUDIO SECTIONS
    ========================================================================== */
 .lookbook-section, .studio-profile-section {
     max-width: 1200px;
@@ -342,7 +342,7 @@ body {
     color: #6e6458;
 }
 
-/* --- WHY CHOOSE US? FIXED OUT-OF-BOX FRAME STYLES --- */
+
 .vision-banner {
     max-width: 1200px;
     margin: 80px auto;
@@ -393,7 +393,7 @@ body {
     color: #bfa37a;
 }
 
-/* --- STUDIO SECTION STYLES --- */
+
 .studio-profile-section {
     display: flex;
     align-items: center;
@@ -453,7 +453,7 @@ body {
 }
 
 /* ==========================================================================
-   6. GLOBAL FOOTER CODES
+   6. FOOTER 
    ========================================================================== */
 .home-footer-grid {
     max-width: 1200px;
@@ -507,14 +507,14 @@ body {
 .copyright-bar {
     text-align: center;
     padding: 25px 20px;
-    background-color: #faf0f9;
+    background-color: #faf0f8;
     border-top: 1px solid #e8e0d5;
     font-size: 0.75rem;
     color: #8c8275;
 }
 
 /* ==========================================================================
-   7. RESPONSIVE PHONE OVERRIDES
+   7. RESPONSIVE PHONE 
    ========================================================================== */
 @media (max-width: 850px) {
     .navbar { flex-direction: column; gap: 15px; padding: 20px; }
@@ -528,9 +528,9 @@ body {
     .studio-photo-box { height: 350px; }
     .home-footer-grid { flex-direction: column; gap: 35px; padding: 30px 20px; }
 }
-/* Precise Mobile Layout Rebalancing */
+
 @media (max-width: 850px) {
-    /* Forces columns to drop down gracefully vertically */
+    
     .hero-split-container, 
     .art-split-layout,
     .cart-split-layout {
@@ -540,7 +540,7 @@ body {
         padding: 20px !important;
     }
 
-    /* Prevents the text panels from shrinking or shifting left */
+    
     .hero-left-editorial, 
     .art-content-side, 
     .art-visual-side {
@@ -549,13 +549,13 @@ body {
         text-align: center !important;
     }
 
-    /* Centers custom actionable elements alignment */
+    
     .hero-catalog-cta {
         align-self: center !important;
         margin: 0 auto !important;
     }
 
-    /* Scales and locks image containers into screen boundaries */
+    
     .hero-right-display, 
     .main-display-frame {
         width: 100% !important;
@@ -570,7 +570,7 @@ body {
         height: 350px !important;
     }
 
-    /* Shrinks hero headers so they don't break line boundaries */
+    
     .hero-left-editorial h1 {
         font-size: 2.5rem !important;
         letter-spacing: 0px !important;
@@ -718,7 +718,7 @@ body {
 }
 
 /* ==========================================================================
-   9. PAINTING INFORMATION DISPLAY CONSTRAINT LAYER (UPDATED FIX)
+   9. PAINTING INFORMATION DISPLAY 
    ========================================================================== */
 .detail-container {
     max-width: 1200px;
@@ -738,7 +738,7 @@ body {
     width: 50%;
 }
 
-/* Constrains layout box framework boundaries cleanly */
+
 .main-display-frame {
     width: 100%;
     max-width: 550px;
@@ -752,7 +752,7 @@ body {
     justify-content: center;
 }
 
-/* Image scales responsibly inside wrapper box constraints */
+
 .painting-main-display-img {
     width: 100%;
     height: 100%;
@@ -849,7 +849,7 @@ body {
     background-color: #bfa37a;
 }
 
-/* Integrated Checkout Details Form */
+
 .integrated-checkout-section {
     max-width: 800px;
     margin: 60px auto;
@@ -953,7 +953,7 @@ body {
 }
 
 /* ==========================================================================
-   11. NEW INTEGRATED SINGLE CHECKOUT STYLES & SHINING CONFIRMATION EFFECT
+   11. CONFIRMATION EFFECT
    ========================================================================== */
 .quick-add-to-cart-btn {
     width: 100%;
@@ -1058,7 +1058,7 @@ body {
 }
 
 /* ==========================================================================
-   13. TOTAL CART WORKSPACE RESET (LEFT SIDE ITEMS + RIGHT SIDE CHECKOUT)
+   13. Contact
    ========================================================================== */
 .gallery-clean-bg {
     background-color: #faf6f0 !important;
@@ -1268,31 +1268,31 @@ body {
     .cart-summary-sidebar { position: static; width: 100%; }
 }
 
-/* Mobile Responsive Fix for Hero Section */
+
 @media (max-width: 768px) {
-    /* 1. Force the container to stack vertically instead of side-by-side */
+    
     .hero-container, 
-    .welcome-section-grid { /* Use whatever class name wraps both your text and image block */
+    .welcome-section-grid { 
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center; /* Centers the text beautifully on mobile */
+        text-align: center; 
         padding: 20px;
     }
 
-    /* 2. Fix the headline spilling over the edge */
+    
     h1 {
-        font-size: 2.2rem; /* Shrinks the giant text slightly so it fits perfectly on mobile screens */
+        font-size: 2.2rem; 
         line-height: 1.2;
         word-wrap: break-word;
     }
 
-    /* 3. Force the painting image to appear and fit nicely below the text */
+    
     .hero-image-wrapper, 
-    .hero-painting-img { /* Use the class name of your image or its container */
+    .hero-painting-img { 
         width: 100%;
-        max-width: 400px; /* Prevents the painting from becoming massively blown out */
-        margin-top: 30px; /* Leaves a sleek gap between your 'View Artworks' button and the canvas */
+        max-width: 400px; 
+        margin-top: 30px; 
     }
     
     .hero-painting-img img {

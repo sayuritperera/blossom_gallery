@@ -1,10 +1,7 @@
 $(document).ready(function() {
 
-    // ==========================================================================
-    // 1. FIX "WHY CHOOSE US" HOME PAGE SCRAMBLED LAYOUT
-    // ==========================================================================
     if ($('.why-choose-us-section').length || $('#why-choose-us-text').length) {
-        // Enforces clean container bounds so text doesn't overflow or break out of its container box
+        
         $('.why-choose-us-container, .why-choose-us-section').css({
             'display': 'flex',
             'flex-direction': 'column',
@@ -15,7 +12,7 @@ $(document).ready(function() {
             'box-sizing': 'border-box'
         });
         
-        // Target the specific text block causing the alignment issues
+       
         $('h2:contains("Why Choose Us"), .why-choose-heading').css({
             'position': 'relative',
             'margin': '0 auto 20px auto',
@@ -27,18 +24,16 @@ $(document).ready(function() {
         });
     }
 
-    // ==========================================================================
-    // 2. DYNAMIC GALLERY FILTERING (Fixed Mismatched Chip Classes)
-    // ==========================================================================
+   
     $('.filter-chip').on('click', function() {
-        // Remove active highlights from all chips, then apply to the clicked one
+       
         $('.filter-chip').removeClass('active');
         $(this).addClass('active');
 
         const chosenCategory = $(this).attr('data-filter');
 
         $('.gallery-item').each(function() {
-            // If 'All Works' is clicked, or if the card item has the category class name, reveal it
+            
             if (chosenCategory === 'all' || $(this).hasClass(chosenCategory)) {
                 $(this).fadeIn(300);
             } else {
@@ -47,23 +42,18 @@ $(document).ready(function() {
         });
     });
 
-    // ==========================================================================
-    // 3. ROUTING FROM GALLERY CARDS TO DETAIL PAGES
-    // ==========================================================================
    $(document).on('click', '.gallery-card', function(event) {
-        // Prevent click triggers on layout buttons if present
+       
         if ($(event.target).hasClass('info-redirect-btn')) return;
 
-        // Uses .closest() so clicking the raw image element still correctly extracts data attributes
+       
         const currentCard = $(this).closest('.gallery-card');
         const title = currentCard.attr('data-title') || currentCard.find('.art-meta h3').text().trim();
         const price = currentCard.attr('data-price') || currentCard.find('.art-price').text().trim();
         
         window.location.href = `painting-info.html?title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}`;
     });
-    // ==========================================================================
-    // 4. PAINTING-INFO SCREEN CONFIGURATION (Fixing Image Proportions & Toggles)
-    // ==========================================================================
+   
     if (window.location.pathname.includes('painting-info.html')) {
         
        
@@ -119,7 +109,7 @@ $(document).ready(function() {
             $('#canvas-title').text(decodedTitle);
             if (decodedPrice) $('#canvas-price').text(decodedPrice);
 
-            // FIX PHOTO SIZES: Prevent distortion on Serenade, Paradise, and Wild Petal Sketch
+          
             $('.painting-main-display-img').css({
                 'width': '100%',
                 'max-width': '550px',
@@ -138,29 +128,27 @@ $(document).ready(function() {
                 $('#art-spec-year').text(specificArtData.year);
             }
 
-            // Change button functionality to act as the direct information bridge
+           
             $('#info-inquiry-redirect-btn, #add-to-cart-detail-btn')
                 .text('Click to get more information')
                 .attr('id', 'info-inquiry-redirect-btn') 
                 .off('click')
                 .on('click', function() {
                     
-                    // Package the artwork context to take with us to the contact page
+                    
                     const inquiryPackage = {
                         title: decodedTitle,
                         image: specificArtData ? specificArtData.frontImg : 'sib1.jpg'
                     };
                     localStorage.setItem('currentInquiryItem', JSON.stringify(inquiryPackage));
                     
-                    // Route directly over to the new direct contact interface
+                    
                     window.location.href = 'cart.html';
                 });
         }
     }
 
-    // ==========================================================================
-    // 5. CONTACT SCREEN DIRECT PORTFOLIO ENGINE (Replacing old Cart functions)
-    // ==========================================================================
+   
     if (window.location.pathname.includes('cart.html')) {
         const structuralData = localStorage.getItem('currentInquiryItem');
         const displayZone = $('#inquiry-artwork-showcase-zone');
@@ -168,7 +156,7 @@ $(document).ready(function() {
         if (structuralData) {
             const parsedInquiry = JSON.parse(structuralData);
 
-            // Dynamically inject the focused canvas artwork and premium personal message
+           
             displayZone.html(`
                 <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: 'Montserrat', sans-serif;">
                     
@@ -223,7 +211,7 @@ $(document).ready(function() {
                 </div>
             `);
         } else {
-            // General structural fallback message if someone navigates directly to cart.html without clicking a painting
+           
             displayZone.html(`
                 <div style="max-width: 600px; margin: 80px auto; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 20px;">
                     <h2 style="font-family: 'Cinzel', serif; font-size: 28px; margin-bottom: 20px;">Connect with the Studio</h2>

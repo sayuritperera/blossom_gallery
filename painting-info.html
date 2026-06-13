@@ -11,8 +11,10 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-logo">Blossom Gallery.</div>
+   <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">Blossom Gallery.</a></div>
+        
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html" class="active">Paintings</a></li>
@@ -64,15 +66,15 @@
     
     <script>
         $(document).ready(function() {
-            // Direct click handler intercepting the detail view button
+            
             $('#quick-add-to-cart-detail-btn').on('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                // Displays global information prompt alert
+                
                 alert("Interested in this piece? Please use our Inquiry / Contact page to connect directly with the studio for more details.");
                 
-                // Forces direct forward handoff to your contact system page file
+               
                 window.location.href = "cart.html"; 
             });
         });
